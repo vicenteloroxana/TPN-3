@@ -2,25 +2,13 @@ import express from 'express'
 import { suma, resta, mult, div} from './utils/operaciones.js'
 import { random } from './utils/random.js'
 import { info } from './utils/info.js'
+import { hora } from './utils/hora.js'
 /* ------------ INSTANCIA DEL SERVIDOR --------------- */
 const app = express()
 /* ------------ GET Home --------------- */
 
 app.get('/', function(req,res) {
-  var hoy = new Date()
-  var hora = hoy.getHours()
-  if(hora >= 6 && hora <= 12){
-
-    res.send('Buenas Días')
-  }
-  else if(hora >= 13 && hora <= 19 ){
-    res.send('Buenas Tardes')
-  }
-  else if(hora >= 20 && hora <= 5){
-    
-    res.send('Buenas Noches')
-    
-  }
+  res.send(hora())
   
 })
 /* --------- GET RANDOM ------- */

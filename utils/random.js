@@ -1,6 +1,6 @@
 export const random  = () => {
   var numeros = [];
-  for (let i = 1; i <= 10; i++)
+  for (let i = 1; i <= 10000; i++)
   {  
     numeros.push(Math.floor((Math.random() * (20 - 1 + 1)) + 1))
   }
